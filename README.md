@@ -10,7 +10,6 @@
 ## 스크린샷
 <img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/SaveDestination.png" width="280">
 <img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/TableView.png" width="280">
-<img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/SaveDestination.png" width="280">
 <img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/SaveDiary.png" width="280">
 <img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/Map.png" width="280">
 <img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/MapMarker.png" width="280">
