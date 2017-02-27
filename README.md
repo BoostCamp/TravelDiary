@@ -16,8 +16,7 @@
 <img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/MapMarkerInfo.png" width="280">
 
 ## 영상
-[![ScreenShot](.png)]
-<iframe width="700" height="500" src="https://www.youtube.com/embed/5-lE2ItPvfM" frameborder="0" allowfullscreen></iframe>
+[![ScreenShot](.png)](https://www.youtube.com/embed/SHNdYa0bjrU)
 
 ## 사용 기술
 - UIKit, CoreLocation, Foundation
