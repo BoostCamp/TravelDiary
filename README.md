@@ -8,9 +8,13 @@
 - Google Maps를 활용하여 지도에서 여행지의 위치와 내용 등을 볼 수 있음.
 
 ## 스크린샷
-<img src="" width="280">
-<img src="" width="280">
-<img src="" width="280">
+<img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/SaveDestination.png" width="280">
+<img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/TableView.png" width="280">
+<img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/SaveDestination.png" width="280">
+<img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/SaveDiary.png" width="280">
+<img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/Map.png" width="280">
+<img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/MapMarker.png" width="280">
+<img src="https://github.com/BoostCamp/TravelDiary/blob/master/Image/MapMarkerInfo.png" width="280">
 
 ## 영상
 [![ScreenShot](.png)](https://)
