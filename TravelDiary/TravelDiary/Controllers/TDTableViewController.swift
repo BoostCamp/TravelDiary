@@ -170,18 +170,27 @@ extension TDTableViewController: TDHeaderViewDelegate {
     }
     
     func deleteDestinationFor(section: Int) {
-        RealmController.deleteDestination(section: section)
-        
-        RealmController.shared = self.realm.objects(Destination.self)
-        if let region = self.region {
-            self.setFilter(selectedRegion: region)
-        } else {
-            RealmController.filterd = RealmController.shared
+        let alertAction = UIAlertController(title: "기록을 삭제 하시겠습니까?", message: nil, preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "예", style: .default) { (alertAction) in
+            
+            RealmController.deleteDestination(section: section)
+            
+            RealmController.shared = self.realm.objects(Destination.self)
+            if let region = self.region {
+                self.setFilter(selectedRegion: region)
+            } else {
+                RealmController.filterd = RealmController.shared
+            }
+            
+            self.collapseSection()
+            self.tdTableView.reloadData()
         }
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
-        self.collapseSection()
-        self.tdTableView.reloadData()
+        alertAction.addAction(okayAction)
+        alertAction.addAction(cancelAction)
         
+        self.present(alertAction, animated: true, completion: nil)
     }
     
     func showMapFor(section: Int) {

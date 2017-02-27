@@ -66,16 +66,27 @@ extension TDDetailViewController {
     
     @IBAction func deleteTD(_ sender: AnyObject) {
         if let centerCellIndexPath: NSIndexPath  = self.tdCollectionView.centerCellIndexPath {
-            let destination = RealmController.shared[self.indexPath.section]
-            let diary = destination.getDiary(at: centerCellIndexPath.row)
             
-            RealmController.deleteDiary(destination: destination, row: centerCellIndexPath.row, diary: diary!)
-            
-            if RealmController.shared[centerCellIndexPath.section].getDirayCount() == 0 {
-                self.navigationController?.popViewController(animated: true)
-            } else {
-                self.tdCollectionView.reloadData()
+            let alertAction = UIAlertController(title: "기록을 삭제 하시겠습니까?", message: nil, preferredStyle: .alert)
+            let okayAction = UIAlertAction(title: "예", style: .default) { (alertAction) in
+                
+                let destination = RealmController.shared[self.indexPath.section]
+                let diary = destination.getDiary(at: centerCellIndexPath.row)
+                
+                RealmController.deleteDiary(destination: destination, row: centerCellIndexPath.row, diary: diary!)
+                
+                if RealmController.shared[centerCellIndexPath.section].getDirayCount() == 0 {
+                    self.navigationController?.popViewController(animated: true)
+                } else {
+                    self.tdCollectionView.reloadData()
+                }
             }
+            let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+            
+            alertAction.addAction(okayAction)
+            alertAction.addAction(cancelAction)
+            
+            self.present(alertAction, animated: true, completion: nil)
         }
     }
 }
